@@ -1,0 +1,11 @@
+<h2>🎙️ سجّلي تلاوتك</h2>
+
+<button (click)="startRecording()" [disabled]="isRecording">ابدئي التسجيل</button>
+<button (click)="stopRecording()" [disabled]="!isRecording">أوقفي التسجيل</button>
+
+<p *ngIf="audioURL">
+  ✅ تم التسجيل بنجاح!
+  <audio [src]="audioURL" controls></audio>
+</p>
+
+<p>{{ message }}</p>
